@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MeterActivity">
+
+    <com.yangp.ypwaveview.YPWaveView
+        android:id="@+id/heart1"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        app:animatorEnable="true"
+
+        app:behideColor="#664e99e6"
+        app:borderColor="#66AE81FF"
+        app:borderWidthSize="10dp"
+        app:frontColor="#AE81FF"
+        app:max="100"
+        app:progress="60"
+        app:shapeType="heart"
+        app:strong="100"
+        app:textColor="#15DF89"
+        app:textHidden="true"
+        app:shapePadding="8dp"/>
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+        android:id="@+id/pulsator"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:pulse_duration="2000"
+        app:pulse_color="@color/purple_500"
+        app:pulse_startFromScratch="true"
+        app:pulse_interpolator="Accelerate"/>
+
+</RelativeLayout>

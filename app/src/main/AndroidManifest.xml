@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.love2knot.friendshipmeter">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".utils.MySingleton"
         android:allowBackup="true"
@@ -9,8 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.FriendShipMeter">
+        android:theme="@style/Theme.FriendShipMeter"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.MeterActivity"
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".SplashActivity"
             android:exported="true" />

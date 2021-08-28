@@ -25,6 +25,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import pl.bclogic.pulsator4droid.library.PulsatorLayout;
+
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     private final Context context;
@@ -61,6 +63,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             langClickListener.clicked(holder.txtTrans,position);
 
         });
+        holder.txtShare.start();
 
 
 
@@ -87,15 +90,16 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView title,des,txtTrans,txtDate,txtShare,txtAuthor;
+        private final TextView title,des,txtTrans,txtDate,txtAuthor;
         private final ImageView image;
+        private PulsatorLayout txtShare;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title=itemView.findViewById(R.id.title);
             des=itemView.findViewById(R.id.description);
             txtTrans=itemView.findViewById(R.id.txtTrans);
             txtDate=itemView.findViewById(R.id.txtDate);
-            txtShare=itemView.findViewById(R.id.txtShare);
+            txtShare=itemView.findViewById(R.id.pulsator);
             txtAuthor=itemView.findViewById(R.id.txtAuthor);
             image=itemView.findViewById(R.id.imageUrl);
         }
